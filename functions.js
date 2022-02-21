@@ -92,8 +92,8 @@ function addCard (nome,cargo,avatar,git,link){
                 <h2>${cargo}</h2>
             </div>
             <div class="card-links">
-                    <img href="${git}" src="../img/icone-github.svg" alt="">
-                    <img href="${link}" src="../img/icone-linkedin.svg" alt="">
+                    <img href="${git}" src="img/icone-github.svg" alt="">
+                    <img href="${link}" src="img/icone-linkedin.svg" alt="">
                     <input type="button" value="Ver Mais" class="vermais">
             </div>
         </div>
