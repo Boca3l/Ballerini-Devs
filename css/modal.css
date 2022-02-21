@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+  --Overpass: 'Overpass', sans-serif;
+  --Maven: 'Maven Pro', sans-serif;
+
+  --Fonteclara: #D2D2D2;
+  --BGColor: #1D1D1D;
+  --Verde-padrao: #27AE60;
+
+}
+
+.modal{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top:0;
+    width: 100%;  
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(52, 51, 51, 0.7);
+}
+
+.modal-janela{
+    position: relative;
+    margin: auto;
+    top: 100px;
+    width: 450px;
+    height: 650px;
+    z-index: 100;
+    
+    text-align: center;
+    background: rgba(52, 51, 51, 0.95);
+    border-radius: 10px;
+    border: none;
+    padding: 30px;
+}
+
+.modal-janela h1{
+    font: normal 500 2em var(--Maven);
+    color: white;
+    padding: 15px;
+}
+
+.form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.item input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.item label{
+    padding: 10px 0px;
+    font: normal 500 1em var(--Maven);
+    color: white;
+}
+
+#enviar-dev{
+    padding: 10px;
+    width: 150px;
+    color: black;
+}
+
+#cancelar-dev{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 150px;
+}
+
+#cancelar-dev:hover{
+    background-color: red;
+}

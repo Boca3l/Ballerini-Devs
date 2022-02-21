@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+  --Overpass: 'Overpass', sans-serif;
+  --Maven: 'Maven Pro', sans-serif;
+
+  --Fonteclara: #D2D2D2;
+  --BGColor: #1D1D1D;
+  --Verde-padrao: #27AE60;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  font-family: var(--Overpass);
+  background-color: var(--BGColor);
+  color: var(--Fonteclara);
+  width: 100vw;
+  margin: auto;
+  background-image: url('./img/Blobs-baixo.svg');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+header,main{
+  width: 80vw;
+  margin: auto;
+}
+
+
+nav#menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px;
+  flex-wrap: wrap;
+}
+
+nav#menu ul li{
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+}
+
+
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.maven{
+  font-family: var(--Maven);
+  font-size: 1.5em;
+}
+
+.redes{
+  list-style: none;
+}
+
+input#buscar{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  #visibility: hidden;
+  width: 250px;
+}
+
+.container{
+  display: flex;
+  margin: auto;
+  height: 80vh;
+  flex-wrap: wrap;
+}
+
+.container-conteudo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 40vw;
+}
+
+.container-conteudo-titulo{
+  font-size: 3em;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.container-conteudo-texto{
+  font-size: 1.5em;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+.btn-g{
+  background-color: var(--Verde-padrao);
+  padding: 15px;
+  width: 200px;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font: normal regular 1.5em var(--Maven);
+  margin-top: 50px;
+}
+
+.btn-g:hover{
+  background-color: var(--Fonteclara);
+  color: var(--BGColor);
+  font-weight: bold;
+}
+
+.container-img{
+  margin: auto;
+}
+
+#coding{
+  width: 500px;
+  max-width: 80vw;
+}
+
+.flex{
+  margin: 15px;
+  display: flex;
+  gap: 30px;
+}
+
+.div-btn{
+  float: right;
+
+}
+
+@media only screen and (max-width: 1250px) {
+  #coding{
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+
+  .logo img{
+    width: 25px;
+  }
+
+  .maven{
+    font-size: 1.2em;
+  }
+  
+  .container-conteudo-titulo{
+    font-size: 2em;
+  }
+
+  .container-conteudo-texto{
+    font-size: 1.2em;
+  }
+
+  .btn-g{
+    width: 150px;
+    font-size: 1em;
+  }
+  
+  #coding{
+    width: 300px;
+  }
+
+}
+
+@media only screen and (max-width: 750px){
+
+  nav#menu ul li img{
+    width: 25px;
+  }
+
+  .logo img{
+    width: 20px;
+  }
+
+  .maven{
+    font-size: 1em;
+  }
+
+  #buscar{
+    display: none;
+  }
+
+  .container{
+    justify-content: center;
+  }
+
+  .container-conteudo{
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-conteudo-titulo{
+    width: 80vw;
+    font-size: 1.5em;
+  }
+
+  .container-conteudo-texto{
+    width: 80vw;
+    font-size: 1em;
+  }
+
+
+}
+
+@media only screen and (max-width: 300px){
+  nav#menu ul li img{
+    width: 15px;
+  }
+  .logo img{
+    width: 15px;
+  }
+  .maven{
+    font-size: .8em;
+  }
+}
