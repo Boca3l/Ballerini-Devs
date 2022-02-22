@@ -28,7 +28,7 @@ body {
   color: var(--Fonteclara);
   width: 100vw;
   margin: auto;
-  background-image: url('img/Blobs-baixo.svg');
+  background-image: url('../img/Blobs-baixo.svg');
   background-repeat: no-repeat;
   background-position: left bottom;
   background-attachment: fixed;
