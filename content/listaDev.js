@@ -15,16 +15,28 @@ export function setLista (){
             <div class="voltar"><img src="img/voltar-direita.svg" alt=""></div>
 
             <div class="container-cards" id="card-container">
-                //SET CARD
+                
             </div>
 
             <div class="proximo"><img src="img/Continuar-esquerda.svg" alt=""></div>
         </div>
     `;
-    //set first card
-    setCard()
+// carrega os cards no container
+    loadContainer()
+
     //add listener for cadastro
     let listAdd = document.querySelector('#addDev')
     listAdd.addEventListener('click',setCadastro)
 
+    //let listDelete = document.querySelector('#deletar')
+
+    
+}
+
+function loadContainer (){
+    if(localStorage.getItem('divHtml')==null){
+        setCard('','','','','','')
+    }else{
+        document.getElementById('card-container').innerHTML = localStorage.getItem('divHtml')
+    }
 }

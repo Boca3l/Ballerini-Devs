@@ -6,7 +6,7 @@
 A proposta é criar um cadastro de Devs, o projeto foi dividido em 3 Etapas:
 
 - [x] Landing Page com barra de busca, botão e background
-- [x]  Lista de Devs com função para adicionar devs (ainda não implementado local storage)
+- [x]  Lista de Devs com função para adicionar devs (com armazenamento local)
 - [ ]  Função de editar, deletar e pesquisar por dev
 
 [Acessse a aplicação aqui](https://boca3l.github.io/balle-devs-NoReact/)
@@ -15,5 +15,11 @@ A proposta é criar um cadastro de Devs, o projeto foi dividido em 3 Etapas:
 
 - [x] HTML
 - [x] CSS
+
 - [x] JavaScript
+- [x] LocalStorage
+- [x] Event Listeners
+- [x] Create Element
+- [x] Import/Export
+
 

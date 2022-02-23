@@ -86,16 +86,16 @@
       margin-top: 25px;
   }
 
-  #editar,#deletar{
+  .editar,.deletar{
     padding: 5px;
     width: 90px;
     color: var(--Font-black);
   }
 
-  #editar{
+  .editar{
     background-color: var(--Editar);
   }
-  #deletar{
+  .deletar{
       background-color: var(--Deletar);
   }
 
@@ -117,7 +117,7 @@
     color: var(--BGColor);
   }
 
-input.vermais{
+  input.vermais{
     background-color: var(--Verde-padrao);
     font: normal normal .8em var(--Maven);
     padding: 10px;

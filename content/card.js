@@ -1,31 +1,53 @@
 
+export function setCard(id,nome,avatar,cargo,github,linkedin){
 
-export function setCard(){
+    let cardid = localStorage.getItem('devNum')
+    let cardnome
+    let cardavatar
+    let cardcargo
+    let cardgithub
+    let cardlinkedin
+
+    if(id==''){cardid=1}else{cardid=id}
+    if(nome==''){cardnome='Pedro Teixeira'}else{cardnome=nome}
+    if(avatar==''){cardavatar='avatares/avt1.jpg'}else{cardavatar=avatar}
+    if(cargo==''){cardcargo='Estudante Front-End'}else{cardcargo=cargo}
+    if(github==''){cardgithub='#'}else{cardgithub.github}
+    if(linkedin==''){cardlinkedin='#'}else{cardlinkedin=linkedin}
+
     let getContainer = document.querySelector('#card-container')
-    getContainer.innerHTML=
+    getContainer.innerHTML +=
     `
-        <div class="CardDev1">
+        <div class="CardDev1" id="Dev${cardid}">
 
             <div class="card-card">
-                <img src="avatares/avt1.jpg" alt="" class="card-avatar">
+                <img src='${cardavatar}' alt="" class="card-avatar">
                 <div class="linha"></div>
                 <div class="card-dados">
-                    <h1>Pedro Teixeira</h1>
-                    <h2>Estudante Front-End</h2>
+                    <h1>${cardnome}</h1>
+                    <h2>${cardcargo}</h2>
                 </div>
                 <div class="card-links">
-                    <img src="img/icone-github.svg" alt="">
-                    <img src="img/icone-linkedin.svg" alt="">
+                    <a href="${cardgithub}"><img src="img/icone-github.svg" alt=""></a>
+                    <a href="${cardlinkedin}"><img src="img/icone-linkedin.svg" alt=""></a>
                     <input type="button" value="Ver Mais" class="vermais">
                 </div>
             </div>
 
             <div class="card-controles">
-                <input type="button" value="Editar" class="vermais" id="editar">
-                <input type="button" value="Deletar" class="vermais" id="deletar">
+                <input type="button" value="Editar" class="vermais editar" id="editar${cardid}">
+                <input type="button" value="Deletar" class="vermais deletar" id="deletar${cardid}">
             </div>
 
         </div>
     `
+
+    //atualiza numero do id
+    cardid++
+    localStorage.setItem('devNum',cardid)
+
+    //armazena conteudo do container em divHtml no localStorage
+    let divHtml = document.getElementById('card-container').innerHTML
+    localStorage.setItem('divHtml',divHtml)
 
 }
