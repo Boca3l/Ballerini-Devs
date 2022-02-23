@@ -1,3 +1,5 @@
+import {setLanding} from './landing.js';
+
 export function setNav () {
 
     let getHeader = document.body.querySelector('#cabecalho')
@@ -67,6 +69,10 @@ export function setNav () {
     busca.style.visibility = 'hidden'
     
     nav.appendChild(busca)
+
+//event listener for Logo
+    let listLogo = document.querySelector('a.logo')
+    listLogo.addEventListener('click',setLanding)
 
 };
 

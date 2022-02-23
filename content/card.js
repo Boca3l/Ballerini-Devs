@@ -1,13 +1,9 @@
-<div class="div-btn">
-    <input type="button" value="Adicionar Desenvolvedor" class="devmais" onclick="noRefresh('modal','novodev')">
-</div>
 
-<div class="container">
 
-    <div class="voltar"><img src="img/voltar-direita.svg" alt=""></div>
-
-    <div class="container-cards" id="card-container">
-
+export function setCard(){
+    let getContainer = document.querySelector('#card-container')
+    getContainer.innerHTML=
+    `
         <div class="CardDev1">
 
             <div class="card-card">
@@ -23,15 +19,13 @@
                     <input type="button" value="Ver Mais" class="vermais">
                 </div>
             </div>
-        
+
             <div class="card-controles">
                 <input type="button" value="Editar" class="vermais" id="editar">
                 <input type="button" value="Deletar" class="vermais" id="deletar">
             </div>
-        
+
         </div>
+    `
 
-    </div>
-
-    <div class="proximo"><img src="img/Continuar-esquerda.svg" alt=""></div>
-</div>
+}
