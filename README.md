@@ -1,9 +1,11 @@
-# Ballerini Devs - Sem React (Rafaella Ballerini) 🖖 💻
+# Ballerini Devs - Em JS 🖖 💻
 ## Desenvolvido por [Pedro Teixeira](https://www.linkedin.com/in/preisteixeira/)
 
 ![desktop](https://media.discordapp.net/attachments/942807001799491584/943519789639413831/unknown.png?width=1025&height=470)
 
-A proposta é criar um cadastro de Devs, o projeto foi dividido em 3 Etapas:
+Criar um cadastro de Devs, que armazene localmente os usuários para que não sejam perdidos ao recarregar a página.
+
+Projeto foi dividido em 3 Etapas:
 
 - [x] Landing Page com barra de busca, botão e background
 - [x]  Lista de Devs com função para adicionar devs (ainda não implementado local storage)
