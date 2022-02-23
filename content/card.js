@@ -1,3 +1,4 @@
+import {createBtnEventListener} from './listaDev.js'
 
 export function setCard(id,nome,avatar,cargo,github,linkedin){
 
@@ -18,7 +19,7 @@ export function setCard(id,nome,avatar,cargo,github,linkedin){
     let getContainer = document.querySelector('#card-container')
     getContainer.innerHTML +=
     `
-        <div class="CardDev1" id="Dev${cardid}">
+        <div class="CardDev1" id="${cardid}">
 
             <div class="card-card">
                 <img src='${cardavatar}' alt="" class="card-avatar">
@@ -35,8 +36,8 @@ export function setCard(id,nome,avatar,cargo,github,linkedin){
             </div>
 
             <div class="card-controles">
-                <input type="button" value="Editar" class="vermais editar" id="editar${cardid}">
-                <input type="button" value="Deletar" class="vermais deletar" id="deletar${cardid}">
+                <input type="button" value="Editar" class="editar vermais" id="editar${cardid}">
+                <input type="button" value="Deletar" class="deletar vermais" id="deletar${cardid}">
             </div>
 
         </div>
@@ -49,5 +50,7 @@ export function setCard(id,nome,avatar,cargo,github,linkedin){
     //armazena conteudo do container em divHtml no localStorage
     let divHtml = document.getElementById('card-container').innerHTML
     localStorage.setItem('divHtml',divHtml)
+
+    createBtnEventListener()
 
 }

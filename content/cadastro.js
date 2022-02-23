@@ -1,4 +1,5 @@
-import {setDev} from "./novoDev.js";
+import {setDev} from './novoDev.js';
+
 
 export function setCadastro () {
 //abre o modal
