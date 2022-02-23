@@ -28,8 +28,7 @@ export function setLista (){
     let listAdd = document.querySelector('#addDev')
     listAdd.addEventListener('click',setCadastro)
 
-    //let listDelete = document.querySelector('#deletar')
-
+    function teste(){ alert('Deleta') }
     
 }
 
