@@ -23,5 +23,7 @@ Projeto foi dividido em 3 Etapas:
 - [x] Event Listeners
 - [x] Create Element
 - [x] Import/Export
+- [] Slider
+- [] Pesquisa por Dev/Cargo
 
 
