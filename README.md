@@ -5,19 +5,20 @@
 
 Criar um cadastro de Devs, que armazene localmente os usuários para que não sejam perdidos ao recarregar a página.
 
-Projeto foi dividido em 3 Etapas:
+Objetivos do projeto:
 
-- [x] Landing Page com barra de busca, botão e background
-- [x] Lista de Devs com função para adicionar devs (com armazenamento local)
-- [x] Função de editar e deletar
-- [] Rolagem lateral da div
-- [] Pesquisa
+- [x] Criar Landing Page com barra de busca, botão e background
+- [x] Lista de Devs responsiva (com armazenamento local)
+- [x] Função de adicionar, editar e deletar
+- [ ] Rolagem lateral para exibição dos Devs
+- [ ] Pesquisa
 
 
 [Acessse a aplicação aqui](https://boca3l.github.io/balle-devs-NoReact/)
 
 [Acesse o projeto no Figma](https://www.figma.com/file/FX14O2BvLp8UEbXrSkdcUc/Ballerini-Devs?node-id=0%3A1)
 
+Tecnologias usadas no projeto
 - [x] HTML
 - [x] CSS
 - [x] JavaScript
@@ -25,7 +26,7 @@ Projeto foi dividido em 3 Etapas:
 - [x] Event Listeners
 - [x] Create Element
 - [x] Import/Export
-- [] Slider
-- [] Pesquisa por Dev/Cargo
+- [ ] Slider
+- [ ] Pesquisa por Dev/Cargo
 
 
