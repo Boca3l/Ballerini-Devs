@@ -60,10 +60,9 @@ export function setCadastro () {
     }
 
 //listener para criar o novo Dev
-
+//listener para fechar janela
     let listEnviar = document.getElementById('enviar-dev')
     listEnviar.addEventListener('click',setDev)
     listEnviar.addEventListener('click',fechar)
-
 
 }
