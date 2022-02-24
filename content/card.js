@@ -29,8 +29,8 @@ export function setCard(id,nome,avatar,cargo,github,linkedin){
                     <h2>${cardcargo}</h2>
                 </div>
                 <div class="card-links">
-                    <a href="${cardgithub}"><img src="img/icone-github.svg" alt=""></a>
-                    <a href="${cardlinkedin}"><img src="img/icone-linkedin.svg" alt=""></a>
+                    <a href="${cardgithub}" target="_blank"><img src="img/icone-github.svg" alt=""></a>
+                    <a href="${cardlinkedin}" target="_blank"><img src="img/icone-linkedin.svg" alt=""></a>
                     <input type="button" value="Ver Mais" class="vermais">
                 </div>
             </div>
