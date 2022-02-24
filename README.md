@@ -18,7 +18,8 @@ Objetivos do projeto:
 
 [Acesse o projeto no Figma](https://www.figma.com/file/FX14O2BvLp8UEbXrSkdcUc/Ballerini-Devs?node-id=0%3A1)
 
-Tecnologias usadas no projeto
+Tecnologias usadas no projeto:
+
 - [x] HTML
 - [x] CSS
 - [x] JavaScript
