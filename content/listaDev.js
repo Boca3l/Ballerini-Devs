@@ -25,6 +25,8 @@ export function setLista (){
     `;
 // carrega os cards no container
     loadContainer()
+// exibe o search
+    document.getElementById('buscar').style.visibility = "visible"
     
 //add listener para o cadastro de novo dev
     let listAdd = document.querySelector('#addDev')
@@ -32,6 +34,7 @@ export function setLista (){
 
     createBtnEventDeletar()
     createBtnEventEditar()
+
 
 }
 

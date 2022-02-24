@@ -29,13 +29,4 @@ function criarStorage (id,nome,avatar,cargo,github,linkedin){
         localStorage.setItem('devNum',1)
     }
 
-//atualiza localstorage
-    localStorage.setItem('devNum',id.value)
-    localStorage.setItem('id',id.value)
-    localStorage.setItem('nome'+id.value,nome.value)
-    localStorage.setItem('avatar'+id.value,avatar.value)
-    localStorage.setItem('cargo'+id.value,cargo.value)
-    localStorage.setItem('github'+id.value,github.value)
-    localStorage.setItem('linkedin'+id.value,linkedin.value)
-
 }

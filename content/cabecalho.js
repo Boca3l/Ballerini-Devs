@@ -45,6 +45,7 @@ export function setNav () {
     aDiscord.appendChild(imgDiscord)
     aLink.appendChild(imgLink)
     aFace.appendChild(imgFace)
+
 //criar Logo central
     //necessario criar function para redirecionamento
     //Create elements
@@ -73,6 +74,11 @@ export function setNav () {
 //event listener for Logo
     let listLogo = document.querySelector('a.logo')
     listLogo.addEventListener('click',setLanding)
+    listLogo.addEventListener('click',hidebusca)
+    
+    function hidebusca () {
+        document.getElementById('buscar').style.visibility = "hidden"
+    }
 
 };
 
