@@ -63,5 +63,7 @@ export function setCadastro () {
 
     let listEnviar = document.getElementById('enviar-dev')
     listEnviar.addEventListener('click',setDev)
+    listEnviar.addEventListener('click',fechar)
+
 
 }

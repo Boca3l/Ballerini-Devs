@@ -1,4 +1,4 @@
-import {createBtnEventListener} from './listaDev.js'
+import {createBtnEventDeletar, createBtnEventEditar} from './listaDev.js'
 
 export function setCard(id,nome,avatar,cargo,github,linkedin){
 
@@ -13,7 +13,7 @@ export function setCard(id,nome,avatar,cargo,github,linkedin){
     if(nome==''){cardnome='Pedro Teixeira'}else{cardnome=nome}
     if(avatar==''){cardavatar='avatares/avt1.jpg'}else{cardavatar=avatar}
     if(cargo==''){cardcargo='Estudante Front-End'}else{cardcargo=cargo}
-    if(github==''){cardgithub='#'}else{cardgithub.github}
+    if(github==''){cardgithub='#'}else{cardgithub=github}
     if(linkedin==''){cardlinkedin='#'}else{cardlinkedin=linkedin}
 
     let getContainer = document.querySelector('#card-container')
@@ -22,7 +22,7 @@ export function setCard(id,nome,avatar,cargo,github,linkedin){
         <div class="CardDev1" id="${cardid}">
 
             <div class="card-card">
-                <img src='${cardavatar}' alt="" class="card-avatar">
+                <img src='${cardavatar}' alt="" class="card-avatar"/>
                 <div class="linha"></div>
                 <div class="card-dados">
                     <h1>${cardnome}</h1>
@@ -51,6 +51,7 @@ export function setCard(id,nome,avatar,cargo,github,linkedin){
     let divHtml = document.getElementById('card-container').innerHTML
     localStorage.setItem('divHtml',divHtml)
 
-    createBtnEventListener()
+    createBtnEventDeletar()
+    createBtnEventEditar()
 
 }
