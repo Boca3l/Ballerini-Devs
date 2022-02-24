@@ -8,8 +8,11 @@ Criar um cadastro de Devs, que armazene localmente os usuários para que não se
 Projeto foi dividido em 3 Etapas:
 
 - [x] Landing Page com barra de busca, botão e background
-- [x]  Lista de Devs com função para adicionar devs (com armazenamento local)
-- [ ]  Função de editar, deletar e pesquisar por dev
+- [x] Lista de Devs com função para adicionar devs (com armazenamento local)
+- [x] Função de editar e deletar
+- [] Rolagem lateral da div
+- [] Pesquisa
+
 
 [Acessse a aplicação aqui](https://boca3l.github.io/balle-devs-NoReact/)
 
@@ -17,7 +20,6 @@ Projeto foi dividido em 3 Etapas:
 
 - [x] HTML
 - [x] CSS
-
 - [x] JavaScript
 - [x] LocalStorage
 - [x] Event Listeners
