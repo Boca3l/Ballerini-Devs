@@ -14,13 +14,11 @@ export function setLista (){
 
         <div class="container">
 
-            <div class="voltar"><img src="img/voltar-direita.svg" alt=""></div>
+            <div class="voltar"><a href="#2"><img src="img/voltar-direita.svg" alt=""></a></div>
 
-            <div class="container-cards" id="card-container">
-                
-            </div>
+            <div class="container-cards" id="card-container"></div>
 
-            <div class="proximo"><img src="img/Continuar-esquerda.svg" alt=""></div>
+            <div class="proximo"><a href="#7"><img src="img/Continuar-esquerda.svg" alt=""></a></div>
         </div>
     `;
 // carrega os cards no container

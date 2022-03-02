@@ -30,7 +30,10 @@
     max-width: 850px;
     overflow: hidden;
     overflow-x: auto;
-    transition: background-image 2s;
+}
+
+.container-cards::-webkit-scrollbar{
+  width: 0;
 }
 
   .card-card{

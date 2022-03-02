@@ -1,4 +1,5 @@
 import {createBtnEventDeletar, createBtnEventEditar} from './listaDev.js'
+import cDev from './cardclass.js'
 
 export function setCard(id,nome,avatar,cargo,github,linkedin){
 
@@ -8,7 +9,8 @@ export function setCard(id,nome,avatar,cargo,github,linkedin){
     let cardcargo
     let cardgithub
     let cardlinkedin
-
+    
+//Valores Default
     if(id==''){cardid=1}else{cardid=id}
     if(nome==''){cardnome='Pedro Teixeira'}else{cardnome=nome}
     if(avatar==''){cardavatar='avatares/avt1.jpg'}else{cardavatar=avatar}
