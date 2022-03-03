@@ -1,12 +1,27 @@
 
-export function carregaLista(){
+export function carregaLista(busca){
 //aponta card container
     let getContainer = document.querySelector('#card-container')
 
-    if(localStorage.getItem('devStorage')==null || localStorage.getItem(['devNum'])==0){
+    if(localStorage.getItem('devStorage')==null || JSON.parse(localStorage.getItem('devStorage'))[0].cardid==null){
         getContainer.innerHTML = "<h1>Não há Devs a serem exibidos</h1>"
+
+    }if(busca[0] != null){
+        //carrega array temporário da busca
+        if(busca[0] == 0){
+            getContainer.innerHTML = "<h1>Não há Devs com estes parâmetros a serem exibidos</h1>"
+        }else{
+         carregar(busca)
+        }
     }else{
-        let arrayDev = JSON.parse(localStorage.getItem('devStorage'))
+        //carrega array local Storage
+        let arrayStorage = JSON.parse(localStorage.getItem('devStorage'))
+        carregar(arrayStorage)
+    }
+
+// ForEAch para carregar os arrays na tela
+    function carregar(arrayDev){
+
         arrayDev.forEach(item => {
             getContainer.innerHTML +=
             `
