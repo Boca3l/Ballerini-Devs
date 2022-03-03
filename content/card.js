@@ -1,57 +1,69 @@
 import {createBtnEventDeletar, createBtnEventEditar} from './listaDev.js'
-import cDev from './cardclass.js'
 
 export function setCard(id,nome,avatar,cargo,github,linkedin){
-
-    let cardid = localStorage.getItem('devNum')
-    let cardnome
-    let cardavatar
-    let cardcargo
-    let cardgithub
-    let cardlinkedin
+//cria lista de Devs
+    let arrayDev = []
+//cria objeto Dev com valores Default
+    let Dev = {
+        cardid : 0,
+        cardnome : 'Pedro Teixeira',
+        cardavatar : 'avatares/avt1.jpg',
+        cardcargo : 'Estudante Front-End',
+        cardgithub : '#',
+        cardlinkedin : '#',
+    }
     
-//Valores Default
-    if(id==''){cardid=1}else{cardid=id}
-    if(nome==''){cardnome='Pedro Teixeira'}else{cardnome=nome}
-    if(avatar==''){cardavatar='avatares/avt1.jpg'}else{cardavatar=avatar}
-    if(cargo==''){cardcargo='Estudante Front-End'}else{cardcargo=cargo}
-    if(github==''){cardgithub='#'}else{cardgithub=github}
-    if(linkedin==''){cardlinkedin='#'}else{cardlinkedin=linkedin}
+//Valores atualiza os valores
+    if(id!=''){Dev.cardid=id}
+    if(nome!=''){Dev.cardnome=nome}
+    if(avatar!=''){Dev.cardavatar=avatar}
+    if(cargo!=''){Dev.cardcargo=cargo}
+    if(github!=''){Dev.cardgithub=github}
+    if(linkedin!=''){Dev.cardlinkedin=linkedin}
 
+//Se ja houver valor no Local Storage atualiza a lista
+//senão cria o array no Storage e atualiza o array
+    if(localStorage.getItem('devStorage')==null){
+        arrayDev.push(Dev)
+        localStorage.setItem('devStorage',JSON.stringify(arrayDev))
+    }else{
+        arrayDev = JSON.parse(localStorage.getItem('devStorage'))
+        arrayDev.push(Dev)
+        localStorage.setItem('devStorage',JSON.stringify(arrayDev))
+    }
+
+//limpa div antes de iniciar
     let getContainer = document.querySelector('#card-container')
-    getContainer.innerHTML +=
-    `
-        <div class="CardDev1" id="${cardid}">
+    getContainer.innerHTML = ''
 
-            <div class="card-card">
-                <img src='${cardavatar}' alt="" class="card-avatar"/>
-                <div class="linha"></div>
-                <div class="card-dados">
-                    <h1>${cardnome}</h1>
-                    <h2>${cardcargo}</h2>
+//para cada item da lista cria um novo card
+    arrayDev.forEach(item => {
+        getContainer.innerHTML +=
+        `
+            <div class="CardDev1" id="${item.cardid}">
+
+                <div class="card-card">
+                    <img src='${item.cardavatar}' alt="" class="card-avatar"/>
+                    <div class="linha"></div>
+                    <div class="card-dados">
+                        <h1>${item.cardnome}</h1>
+                        <h2>${item.cardcargo}</h2>
+                    </div>
+                    <div class="card-links">
+                        <a href="${item.cardgithub}" target="_blank"><img src="img/icone-github.svg" alt=""></a>
+                        <a href="${item.cardlinkedin}" target="_blank"><img src="img/icone-linkedin.svg" alt=""></a>
+                        <input type="button" value="Ver Mais" class="vermais">
+                    </div>
                 </div>
-                <div class="card-links">
-                    <a href="${cardgithub}" target="_blank"><img src="img/icone-github.svg" alt=""></a>
-                    <a href="${cardlinkedin}" target="_blank"><img src="img/icone-linkedin.svg" alt=""></a>
-                    <input type="button" value="Ver Mais" class="vermais">
+
+                <div class="card-controles">
+                    <input type="button" value="Editar" class="editar vermais" id="editar${item.cardid}">
+                    <input type="button" value="Deletar" class="deletar vermais" id="deletar${item.cardid}">
                 </div>
+
             </div>
-
-            <div class="card-controles">
-                <input type="button" value="Editar" class="editar vermais" id="editar${cardid}">
-                <input type="button" value="Deletar" class="deletar vermais" id="deletar${cardid}">
-            </div>
-
-        </div>
-    `
-
-    //atualiza numero do id
-    cardid++
-    localStorage.setItem('devNum',cardid)
-
-    //armazena conteudo do container em divHtml no localStorage
-    let divHtml = document.getElementById('card-container').innerHTML
-    localStorage.setItem('divHtml',divHtml)
+        `
+    });
 
     createBtnEventDeletar()
     createBtnEventEditar()

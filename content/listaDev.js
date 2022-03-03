@@ -2,6 +2,7 @@ import { setCadastro } from "./cadastro.js";
 import { setCard } from "./card.js";
 import { editarConfirm } from "./editar.js";
 import { deletarConfirm } from "./deletar.js";
+import { carregaLista } from "./carregaDevs.js";
 
 export function setLista (){
     
@@ -38,7 +39,7 @@ export function setLista (){
 
 function loadContainer (){
     if(localStorage.getItem('divHtml')==null){
-        setCard('','','','','','')
+        carregaLista()
     }else{
         document.getElementById('card-container').innerHTML = localStorage.getItem('divHtml')
     }

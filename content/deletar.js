@@ -1,4 +1,5 @@
-import {editarLista} from './editarLista.js'
+
+import { setLista } from './listaDev.js';
 
 export function deletarConfirm() {
 
@@ -37,10 +38,18 @@ export function deletarConfirm() {
     document.getElementById('enviar-dev').addEventListener('click',deleteDevConfirmed)
     
     function deleteDevConfirmed () {
-        let excluirdiv = document.getElementById(div)
-        excluirdiv.parentNode.removeChild(excluirdiv)
 
-        editarLista()
+        let excluirdiv = Number(document.getElementById(div).id)-1
+        let arrayDev = []
+        arrayDev = JSON.parse(localStorage.getItem('devStorage'))
+
+        arrayDev.splice(excluirdiv,1)
+        localStorage.setItem('devStorage',JSON.stringify(arrayDev))
+
+        let c = localStorage.getItem('devNum')
+        localStorage.setItem('devNum',c-1)
+
+        setLista()
         fechar()
     }
 

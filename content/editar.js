@@ -1,27 +1,33 @@
-import {editarLista} from './editarLista.js'
+import { carregaLista } from "./carregaDevs.js"
+import { setLista } from "./listaDev.js"
 
 export function editarConfirm() {
 //nós
     let divId = localStorage.getItem('editarDiv')
-    let divPointer = document.getElementById(divId)
-    let divCard = divPointer.childNodes[1]
-    let dadosPessoais = divCard.childNodes[5]
-    let divLinks = divCard.childNodes[7]
+    let divPointer = Number(document.getElementById(divId).id)-1
+    //let divCard = divPointer.childNodes[1]
+    //let dadosPessoais = divCard.childNodes[5]
+    //let divLinks = divCard.childNodes[7]
+
+    let arrayDev = JSON.parse(localStorage.getItem('devStorage'))
 
 //valores
-    let avatar = divCard.childNodes[1].src
-    let nome = dadosPessoais.childNodes[1].innerText
-    let cargo = dadosPessoais.childNodes[3].innerText
-    let github = divLinks.childNodes[1].href
-    let linkedin = divLinks.childNodes[3].href
+    let id = arrayDev[divPointer].cardid
+    let avatar = arrayDev[divPointer].cardavatar
+    let nome = arrayDev[divPointer].cardnome
+    let cargo = arrayDev[divPointer].cardcargo
+    let github = arrayDev[divPointer].cardgithub
+    let linkedin = arrayDev[divPointer].cardlinkedin
 
+/*
 //nós para edição
     let editavatar = divCard.childNodes[1]
     let editnome = dadosPessoais.childNodes[1]
     let editcargo = dadosPessoais.childNodes[3]
     let editgithub = divLinks.childNodes[1]
     let editlinkedin = divLinks.childNodes[3]
-
+*/
+   
 
 //abre o modal
     let getCadastro = document.querySelector('#cadastro')
@@ -29,7 +35,7 @@ export function editarConfirm() {
     `<div class="modal" id="NewDev">
         <div class="modal-janela">
 
-            <h1 class="modal-titulo">Adicionar Desenvolvedor ${divPointer.id}</h1>
+            <h1 class="modal-titulo">Editar Desenvolvedor ${id}</h1>
 
             <div class="form">
 
@@ -67,12 +73,12 @@ export function editarConfirm() {
     </div>
     `;
 
-//função para fechar o cadastro
+//função para fechar o modal
     function fechar(){
         document.getElementById('NewDev').style.display = "none"
     }
     
-//listeners para fechar o cadastro
+//listeners para fechar o modal
     document.getElementById('cancelar-dev').addEventListener('click',fechar)
 
     window.onclick = function(event){
@@ -85,14 +91,17 @@ export function editarConfirm() {
     document.getElementById('enviar-dev').addEventListener('click',deleteDevConfirmed)
 
     function deleteDevConfirmed () {
-        
-        editavatar.src = document.getElementById('favatar').value
-        editnome.innerText = document.getElementById('fnome').value
-        editcargo.innerText = document.getElementById('fcargo').value
-        editgithub.href = document.getElementById('fgithub').value
-        editlinkedin.href = document.getElementById('flinkedin').value
+//atualiza array local
+        arrayDev[divPointer].cardavatar = document.getElementById('favatar').value 
+        arrayDev[divPointer].cardnome = document.getElementById('fnome').value
+        arrayDev[divPointer].cardcargo = document.getElementById('fcargo').value
+        arrayDev[divPointer].cardgithub = document.getElementById('fgithub').value
+        arrayDev[divPointer].cardlinkedin = document.getElementById('flinkedin').value
 
-        editarLista()
+//atualiza o local Storage
+        localStorage.setItem('devStorage',JSON.stringify(arrayDev))
+
+        setLista()
         fechar()
     }
 
