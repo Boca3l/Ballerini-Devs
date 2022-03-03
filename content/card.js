@@ -9,10 +9,12 @@ export function setCard(id,nome,avatar,cargo,github,linkedin){
         cardnome : 'Pedro Teixeira',
         cardavatar : 'avatares/avt1.jpg',
         cardcargo : 'Estudante Front-End',
-        cardgithub : '#',
-        cardlinkedin : '#',
+        cardgithub : 'https://github.com/Boca3l',
+        cardlinkedin : 'https://www.linkedin.com/in/preisteixeira/',
     }
-    
+    if(id==1){
+        Dev.cardavatar='avatares/avt2.jpg'
+    }
 //Valores atualiza os valores
     if(nome!=''){Dev.cardnome=nome}
     if(avatar!=''){Dev.cardavatar=avatar}
