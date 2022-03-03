@@ -6,15 +6,13 @@ export function setCard(id,nome,avatar,cargo,github,linkedin){
 //cria objeto Dev com valores Default
     let Dev = {
         cardid : id,
-        cardnome : 'Pedro Teixeira',
+        cardnome : 'Sem Nome',
         cardavatar : 'avatares/avt1.jpg',
-        cardcargo : 'Estudante Front-End',
-        cardgithub : 'https://github.com/Boca3l',
-        cardlinkedin : 'https://www.linkedin.com/in/preisteixeira/',
+        cardcargo : 'Pequeno Gafanhoto',
+        cardgithub : '#',
+        cardlinkedin : '#',
     }
-    if(id==1){
-        Dev.cardavatar='avatares/avt2.jpg'
-    }
+
 //Valores atualiza os valores
     if(nome!=''){Dev.cardnome=nome}
     if(avatar!=''){Dev.cardavatar=avatar}
@@ -44,7 +42,7 @@ export function setCard(id,nome,avatar,cargo,github,linkedin){
             <div class="CardDev1" id="${item.cardid}">
 
                 <div class="card-card">
-                    <img src='${item.cardavatar}' alt="" class="card-avatar"/>
+                    <div class="img-card"><img src='${item.cardavatar}' alt="" class="card-avatar"/></div>
                     <div class="linha"></div>
                     <div class="card-dados">
                         <h1>${item.cardnome}</h1>

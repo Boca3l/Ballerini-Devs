@@ -5,7 +5,7 @@ import { carregaLista } from "./carregaDevs.js";
 import { VoltarLista,AvancarLista } from "./moverLista.js";
 import { Buscar } from "./busca.js";
 
-export function setLista (busca){
+export function setLista (){
     
     let getConteudo = document.body.querySelector('#conteudo')
     getConteudo.innerHTML=
@@ -26,7 +26,7 @@ export function setLista (busca){
     `;
 
 // carrega os cards no container
-        carregaLista(busca)
+    carregaLista(0)
 
 // exibe o search
     document.getElementById('buscar').style.visibility = "visible"
@@ -39,7 +39,7 @@ export function setLista (busca){
     createBtnEventEditar()
     createBtnEventVoltar()
     createBtnEventProximo()
-    buscaElemento()
+    createBuscaElemento()
 }
 
 //////// listener Deletar DEV
@@ -80,7 +80,7 @@ export function createBtnEventProximo(){
 }
 
 //////// listener Buscar Lista
-export function buscaElemento(){
+export function createBuscaElemento(){
     let busca = document.querySelector('#buscar')
     busca.addEventListener('keyup',Buscar)
 }
