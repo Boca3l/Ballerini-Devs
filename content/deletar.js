@@ -5,7 +5,7 @@ export function deletarConfirm() {
 
     let div = localStorage.getItem('excluirDiv')
 
-//abre o modal
+//abre o modal de confirmação
     let getCadastro = document.querySelector('#cadastro')
     getCadastro.innerHTML = 
     `<div class="modal" id="NewDev">
@@ -20,6 +20,29 @@ export function deletarConfirm() {
     </div>
     `;
 
+//listener para confirmar exclusão
+    document.getElementById('enviar-dev').addEventListener('click',deleteDevConfirmed)
+    
+    function deleteDevConfirmed () {
+    //pega array do localstorage
+        let arrayDev = []
+        arrayDev = JSON.parse(localStorage.getItem('devStorage'))
+        
+    //encontra item selecionado e exclui do array local
+        arrayDev.forEach(item => {
+            if(item.cardid === div){
+                arrayDev.splice(arrayDev.indexOf(item),1)
+            }
+        });
+
+    //atualiza array Storage
+        localStorage.setItem('devStorage',JSON.stringify(arrayDev))
+/
+    //atualiza lista e fecha modal
+        setLista()
+        fechar()
+    }
+
 //função para fechar o cadastro
     function fechar(){
         document.getElementById('NewDev').style.display = "none"
@@ -32,26 +55,7 @@ export function deletarConfirm() {
         if(event.target == document.getElementById('NewDev')){
             fechar()
         }
-    }
-
-//listener para confirmar exclusão
-    document.getElementById('enviar-dev').addEventListener('click',deleteDevConfirmed)
-    
-    function deleteDevConfirmed () {
-
-        let excluirdiv = Number(document.getElementById(div).id)-1
-        let arrayDev = []
-        arrayDev = JSON.parse(localStorage.getItem('devStorage'))
-
-        arrayDev.splice(excluirdiv,1)
-        localStorage.setItem('devStorage',JSON.stringify(arrayDev))
-
-        let c = localStorage.getItem('devNum')
-        localStorage.setItem('devNum',c-1)
-
-        setLista()
-        fechar()
-    }
+    }   
 
 }
 

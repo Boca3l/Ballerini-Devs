@@ -19,11 +19,11 @@ export function setDev () {
 //armazena as vaa
 function criarStorage (){
 //se devNum estiver vazio recebe 1
-    if(localStorage.getItem('devNum')==null){
+//senao le o devnum e adiciona mais um
+    if(localStorage.getItem('devNum')==null || localStorage.getItem('devNum').length==0){
         localStorage.setItem('devNum',1)
     }else{
         let c = Number(localStorage.getItem('devNum'))
-        
         localStorage.setItem('devNum',c+1)
     }
 
