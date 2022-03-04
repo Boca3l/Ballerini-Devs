@@ -2,6 +2,8 @@ import { setCadastro } from "./cadastro.js";
 import { editarConfirm } from "./editar.js";
 import { deletarConfirm } from "./deletar.js";
 import { carregaLista } from "./carregaDevs.js";
+import { VoltarLista,AvancarLista } from "./moverLista.js";
+import { Buscar } from "./busca.js";
 
 export function setLista (){
     
@@ -14,15 +16,18 @@ export function setLista (){
 
         <div class="container">
 
-            <div class="voltar"><a href="#2"><img src="img/voltar-direita.svg" alt=""></a></div>
+            <div class="voltar"><a id="voltar"><img src="img/voltar-direita.svg" id="volta"></a></div>
 
             <div class="container-cards" id="card-container"></div>
 
-            <div class="proximo"><a href="#7"><img src="img/Continuar-esquerda.svg" alt=""></a></div>
+            <div class="proximo"><a id="proximo"><img src="img/Continuar-esquerda.svg" id="ida"></a></div>
+        
         </div>
     `;
+
 // carrega os cards no container
-    loadContainer()
+    carregaLista(0)
+
 // exibe o search
     document.getElementById('buscar').style.visibility = "visible"
     
@@ -32,43 +37,50 @@ export function setLista (){
 
     createBtnEventDeletar()
     createBtnEventEditar()
-
-
+    createBtnEventVoltar()
+    createBtnEventProximo()
+    createBuscaElemento()
 }
 
-function loadContainer (){
-    if(localStorage.getItem('divHtml')==null){
-        carregaLista()
-    }else{
-        document.getElementById('card-container').innerHTML = localStorage.getItem('divHtml')
-    }
-}
-//Deletar DEV
+//////// listener Deletar DEV
 export function createBtnEventDeletar(){
     let btnDeletar = document.getElementsByClassName('deletar')
     for(let item of btnDeletar){
         item.addEventListener('click',deletarDev)
     }
 }
-
 function deletarDev(){
     let divDeletar = this.parentNode.parentNode.id
     localStorage.setItem('excluirDiv',divDeletar)
     deletarConfirm()
 }
 
-//Editar Dev
+//////// listener Editar Dev
 export function createBtnEventEditar(){
     let btnEditar = document.getElementsByClassName('editar')
     for(let item of btnEditar){
         item.addEventListener('click',editarDev)
     }
 }
-
 function editarDev(){
     let divEditar = this.parentNode.parentNode.id
     localStorage.setItem('editarDiv',divEditar)
     editarConfirm()
 }
 
+//////// listener Voltar Lista
+export function createBtnEventVoltar(){
+    let btnVoltar = document.querySelector('#voltar')
+    btnVoltar.addEventListener('click',VoltarLista)
+}
+//////// listener Avancar Lista
+export function createBtnEventProximo(){
+    let btnProximo = document.querySelector('#proximo')
+    btnProximo.addEventListener('click',AvancarLista)
+}
 
+//////// listener Buscar Lista
+export function createBuscaElemento(){
+    let busca = document.querySelector('#buscar')
+    busca.addEventListener('keyup',Buscar)
+}

@@ -26,5 +26,4 @@ function criarStorage (){
         let c = Number(localStorage.getItem('devNum'))
         localStorage.setItem('devNum',c+1)
     }
-
 }

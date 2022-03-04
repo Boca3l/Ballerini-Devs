@@ -10,8 +10,8 @@ Objetivos do projeto:
 - [x] Criar Landing Page com barra de busca, botão e background
 - [x] Lista de Devs responsiva (com armazenamento local)
 - [x] Função de adicionar, editar e deletar
-- [ ] Rolagem lateral para exibição dos Devs
-- [ ] Pesquisa
+- [x] Rolagem lateral para exibição dos Devs
+- [x] Pesquisa
 
 
 [Acessse a aplicação aqui](https://boca3l.github.io/balle-devs-NoReact/)
@@ -27,7 +27,8 @@ Tecnologias usadas no projeto:
 - [x] Event Listeners
 - [x] Create Element
 - [x] Import/Export
-- [ ] Slider
-- [ ] Pesquisa por Dev/Cargo
+- [x] Slider
+- [x] Pesquisa por Dev/Cargo
 
+Faltam apenas ajustes no Css para garantir a responsividade em dispositivos móveis
 

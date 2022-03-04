@@ -2,9 +2,10 @@
 import { setLista } from "./listaDev.js"
 
 export function editarConfirm() {
+    
 //recupera ao Id da div a ser editada
     let divId = localStorage.getItem('editarDiv')
-
+    
 //cria variável para receber o objeto DEV
     let editDev
 
@@ -12,8 +13,9 @@ export function editarConfirm() {
 //passa valores do dev para o editDev
     let arrayDev = []
     arrayDev = JSON.parse(localStorage.getItem('devStorage'))
+
     arrayDev.forEach(item => {
-        if (item.cardid === divId) {
+        if (item.cardid == divId) {
             editDev = item
         }
     });
