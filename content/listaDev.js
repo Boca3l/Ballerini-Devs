@@ -10,7 +10,7 @@ export function setLista (){
     let getConteudo = document.body.querySelector('#conteudo')
     getConteudo.innerHTML=
     `
-        <div class="div-btn">
+        <div class="div-btn" id="div-btn">
             <input type="button" value="Adicionar Desenvolvedor" class="devmais" id="addDev">
         </div>
 

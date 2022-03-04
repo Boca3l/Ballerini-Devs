@@ -15,6 +15,11 @@
 
 }
 
+#div-btn{
+  display: flex;
+  justify-content: flex-end;
+}
+
 .container{
     align-items: center;
     justify-content: space-around;

@@ -56,8 +56,6 @@ nav#menu ul li{
   margin: 0px 10px 0px 0px;
 }
 
-
-
 .logo{
   display: flex;
   align-items: center;
@@ -80,14 +78,6 @@ input#buscar{
   visibility: hidden;
   width: 250px;
 }
-/*
-#conteudo{
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
-  margin: auto;
-}
-*/
 
 .container{
   display: flex;
