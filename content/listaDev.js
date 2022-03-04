@@ -10,7 +10,7 @@ export function setLista (){
     let getConteudo = document.body.querySelector('#conteudo')
     getConteudo.innerHTML=
     `
-        <div class="div-btn">
+        <div class="div-btn" id="float">
             <input type="button" value="Adicionar Desenvolvedor" class="devmais" id="addDev">
         </div>
 
@@ -23,7 +23,9 @@ export function setLista (){
             <div class="proximo"><a id="proximo"><img src="img/Continuar-esquerda.svg" id="ida"></a></div>
         
         </div>
-    `;
+    `
+    getConteudo
+    ;
 
 // carrega os cards no container
     carregaLista(0)

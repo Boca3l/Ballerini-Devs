@@ -113,11 +113,13 @@
       background-color: var(--Deletar);
   }
 
+  div#float{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
   input.devmais{
-    display: block;
-    position: absolute;
-    top: 100px;
-    right: 140px;
     background-color: var(--Verde-padrao);
     font: normal normal .8em var(--Maven);
     padding: 10px;
@@ -144,4 +146,31 @@
   input.vermais:hover{
     background-color: var(--Fonteclara);
     color: var(--BGColor);
+  }
+
+  @media only screen and (max-width: 1320px) {
+    img#volta,img#ida{
+      width: 50px;
+    }
+    container{
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+    }   
+
+  }
+
+  @media only screen and (max-width: 1265px) {
+    img#volta,img#ida{
+      display: none;
+    }
+    .container-cards::-webkit-scrollbar{
+      width: 10px;
+    }
+    .container-cards::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      background: hsla(0, 0%, 98%, 0.14); 
+  }
+
   }
