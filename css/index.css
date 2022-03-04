@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 a{
@@ -97,6 +98,7 @@ input#buscar{
   font-size: 3em;
   font-weight: bold;
   padding: 5px;
+  margin-top: 50px;
 }
 
 .container-conteudo-texto{
