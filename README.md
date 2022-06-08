@@ -14,7 +14,7 @@ Objetivos do projeto:
 - [x] Pesquisa
 
 
-[Acessse a aplicação aqui](https://boca3l.github.io/balle-devs-NoReact/)
+[Acessse a aplicação aqui](https://boca3l.github.io/Ballerini-Devs/)
 
 [Acesse o projeto no Figma](https://www.figma.com/file/FX14O2BvLp8UEbXrSkdcUc/Ballerini-Devs?node-id=0%3A1)
 
